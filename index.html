@@ -255,37 +255,40 @@
   }
   section + section{border-top:1px solid var(--line)}
   .section-head{
-    display:grid;
-    grid-template-columns:120px 1fr;
-    gap:32px;
+    display:block;
     margin-bottom:64px;
-    align-items:start;
   }
   .section-num{
     font-family:'Source Code Pro','JetBrains Mono',monospace;
-    font-size:11px;
-    letter-spacing:0.15em;
+    font-size:12px;
+    letter-spacing:0.18em;
     color:var(--accent);
-    padding-top:14px;
+    text-transform:uppercase;
+    display:block;
+    margin-bottom:16px;
+    font-weight:500;
   }
   .section-title{
     font-family:'Source Sans 3',sans-serif;
-    font-size:clamp(36px,5vw,58px);
+    font-size:clamp(32px,4vw,44px);
     line-height:1.1;
-    letter-spacing:-0.02em;
+    letter-spacing:-0.025em;
     color:var(--ink);
     font-weight:600;
+    padding-bottom:24px;
+    border-bottom:1px solid var(--line);
   }
   .section-title em{color:var(--accent);font-weight:600}
 
   /* ==================== ABOUT ==================== */
   .about-grid{
     display:grid;
-    grid-template-columns:120px 1fr 1fr;
-    gap:32px 64px;
+    grid-template-columns:1fr 1fr;
+    gap:48px 64px;
+    max-width:1100px;
   }
   .about-lead{
-    grid-column:2 / 3;
+    grid-column:1 / 2;
     font-family:'Source Sans 3',sans-serif;
     font-size:28px;
     line-height:1.35;
@@ -294,7 +297,7 @@
     letter-spacing:-0.02em;
   }
   .about-body{
-    grid-column:3 / 4;
+    grid-column:2 / 3;
     color:var(--ink-soft);
     font-size:17px;
     line-height:1.7;
@@ -309,9 +312,7 @@
 
   /* ==================== EXPERIENCE ==================== */
   .exp-grid{
-    display:grid;
-    grid-template-columns:120px 1fr;
-    gap:32px;
+    max-width:1100px;
   }
   .exp-list{display:flex;flex-direction:column}
   .exp-item{
@@ -406,9 +407,7 @@
 
   /* ==================== RESEARCH ==================== */
   .research-grid{
-    display:grid;
-    grid-template-columns:120px 1fr;
-    gap:32px;
+    max-width:1100px;
   }
   .research-list{display:flex;flex-direction:column}
   .research-item{
@@ -459,9 +458,7 @@
 
   /* ==================== PUBLICATIONS ==================== */
   .pub-grid{
-    display:grid;
-    grid-template-columns:120px 1fr;
-    gap:32px;
+    max-width:1100px;
   }
   .pub-list{display:flex;flex-direction:column}
   .pub{
@@ -541,9 +538,7 @@
 
   /* ==================== ELSEWHERE ==================== */
   .elsewhere-grid{
-    display:grid;
-    grid-template-columns:120px 1fr;
-    gap:32px;
+    max-width:1100px;
   }
   .elsewhere-links{
     display:grid;
@@ -555,12 +550,12 @@
   /* ==================== MATERIALS ==================== */
   .cv-block{
     display:grid;
-    grid-template-columns:120px 1fr 1fr;
-    gap:32px 64px;
+    grid-template-columns:1fr 1fr;
+    gap:48px 64px;
+    max-width:1100px;
     align-items:start;
   }
   .cv-pitch{
-    grid-column:2 / 3;
     font-family:'Source Sans 3',sans-serif;
     font-size:36px;
     line-height:1.2;
@@ -570,7 +565,6 @@
   }
   .cv-pitch em{color:var(--accent);font-weight:500}
   .cv-actions{
-    grid-column:3 / 4;
     display:flex;
     flex-direction:column;
     gap:14px;
@@ -600,9 +594,7 @@
 
   /* ==================== TEACHING ==================== */
   .teach-grid{
-    display:grid;
-    grid-template-columns:120px 1fr;
-    gap:32px;
+    max-width:1100px;
   }
   .teach-list{display:flex;flex-direction:column}
   .teach-prose{
@@ -651,39 +643,33 @@
 
   /* ==================== CONTACT ==================== */
   .contact-block{
-    display:grid;
-    grid-template-columns:120px 1fr;
-    gap:32px;
+    max-width:1100px;
   }
   .contact-headline{
     font-family:'Source Sans 3',sans-serif;
-    font-size:clamp(40px,5.2vw,68px);
-    line-height:1.15;
-    letter-spacing:-0.02em;
-    color:var(--ink);
-    font-weight:600;
-    margin-bottom:36px;
-    max-width:900px;
+    font-size:20px;
+    line-height:1.55;
+    color:var(--ink-soft);
+    font-weight:400;
+    margin-bottom:28px;
+    max-width:700px;
   }
-  .contact-headline em{color:var(--accent);font-weight:600}
 
   .contact-cta{
     display:inline-flex;
     align-items:baseline;
-    gap:14px;
+    gap:10px;
     font-family:'Source Sans 3',sans-serif;
-    font-size:clamp(24px,3vw,36px);
+    font-size:18px;
     font-weight:500;
-    font-style:italic;
     color:var(--accent);
     line-height:1;
-    letter-spacing:-0.01em;
-    margin-bottom:56px;
-    padding-bottom:6px;
-    border-bottom:2px solid var(--accent);
+    margin-bottom:48px;
+    padding-bottom:4px;
+    border-bottom:1.5px solid var(--accent);
     transition:gap .25s ease, opacity .2s;
   }
-  .contact-cta:hover{gap:24px;opacity:0.75}
+  .contact-cta:hover{gap:16px;opacity:0.75}
   .contact-cta .arrow{font-style:normal}
   .contact-grid{
     display:grid;
@@ -711,9 +697,7 @@
 
   /* ==================== EDUCATION / AWARDS / TALKS ==================== */
   .edu-grid, .talk-grid, .award-grid, .skill-grid{
-    display:grid;
-    grid-template-columns:120px 1fr;
-    gap:32px;
+    max-width:1100px;
   }
   .edu-list, .talk-list, .award-list{display:flex;flex-direction:column}
 
@@ -917,9 +901,7 @@
     .availability-card{grid-template-columns:1fr;gap:14px;padding:18px 20px}
     .availability-card .av-label{border-right:none;padding-right:0;border-bottom:1px solid var(--line);padding-bottom:10px}
     .availability-card .av-cta{justify-self:start}
-    .hero-meta,.section-head,.about-grid,.research-grid,.pub-grid,
-    .cv-block,.teach-grid,.contact-block,.exp-grid,
-    .edu-grid,.talk-grid,.award-grid,.skill-grid,.elsewhere-grid{
+    .about-grid,.cv-block{
       grid-template-columns:1fr!important;
     }
     .about-lead,.about-body,.cv-pitch,.cv-actions{grid-column:1!important}
@@ -969,7 +951,7 @@
   <div class="hero-meta">
     <span class="label">Portfolio</span>
     <div class="meta-line">
-      Ph.D. Candidate, Statistics &nbsp;·&nbsp; Florida State University &nbsp;·&nbsp; Advised by <em>Dr. Xin Zhang</em>
+      Ph.D. Candidate, Statistics &nbsp;·&nbsp; Florida State University &nbsp;·&nbsp; Advised by <em>Prof. Xin Zhang</em>
     </div>
   </div>
 
@@ -1012,11 +994,10 @@
 <!-- ==================== ABOUT ==================== -->
 <section id="about">
   <div class="section-head">
-    <span class="section-num">§ 01 &nbsp;/&nbsp; About</span>
-    <h2 class="section-title">A brief <em>bio.</em></h2>
+    <span class="section-num">§ 01</span>
+    <h2 class="section-title">About</h2>
   </div>
   <div class="about-grid">
-    <div></div>
     <p class="about-lead">
       I'm a Ph.D. candidate in Statistics at Florida State University, specializing in <em>machine learning, deep learning, and tensor data analysis</em> — with a focus on scalable methods for dimension reduction, low-rank regression, classification, and convex optimization.
     </p>
@@ -1040,11 +1021,10 @@
 <!-- ==================== EXPERIENCE ==================== -->
 <section id="experience">
   <div class="section-head">
-    <span class="section-num">§ 02 &nbsp;/&nbsp; Experience</span>
-    <h2 class="section-title">Where theory <em>meets practice.</em></h2>
+    <span class="section-num">§ 02</span>
+    <h2 class="section-title">Experience</h2>
   </div>
   <div class="exp-grid">
-    <div></div>
     <div class="exp-list">
 
       <div class="exp-item">
@@ -1105,11 +1085,10 @@
 <!-- ==================== EDUCATION ==================== -->
 <section id="education">
   <div class="section-head">
-    <span class="section-num">§ 03 &nbsp;/&nbsp; Education</span>
-    <h2 class="section-title">Where I <em>trained.</em></h2>
+    <span class="section-num">§ 03</span>
+    <h2 class="section-title">Education</h2>
   </div>
   <div class="edu-grid">
-    <div></div>
     <div class="edu-list">
 
       <div class="edu">
@@ -1118,7 +1097,7 @@
           <h3>Ph.D. in <em>Statistics</em></h3>
           <div class="institution">Florida State University &nbsp;·&nbsp; Tallahassee, FL</div>
           <div class="details">
-            <strong>Advisor:</strong> Dr. Xin Zhang &nbsp;·&nbsp; <strong>Expected:</strong> 2026<br>
+            <strong>Advisor:</strong> Prof. Xin Zhang &nbsp;·&nbsp; <strong>Expected:</strong> 2026<br>
             <strong>Dissertation:</strong> Topics on High-Dimensional Statistics
           </div>
         </div>
@@ -1141,11 +1120,10 @@
 <!-- ==================== RESEARCH ==================== -->
 <section id="research">
   <div class="section-head">
-    <span class="section-num">§ 04 &nbsp;/&nbsp; Research</span>
-    <h2 class="section-title">Scalable methods for <em>structured</em> high-dimensional data.</h2>
+    <span class="section-num">§ 04</span>
+    <h2 class="section-title">Research</h2>
   </div>
   <div class="research-grid">
-    <div></div>
     <div class="research-list">
 
       <div class="research-item">
@@ -1204,11 +1182,10 @@
 <!-- ==================== PUBLICATIONS ==================== -->
 <section id="publications">
   <div class="section-head">
-    <span class="section-num">§ 05 &nbsp;/&nbsp; Publications</span>
-    <h2 class="section-title">Selected <em>work.</em></h2>
+    <span class="section-num">§ 05</span>
+    <h2 class="section-title">Publications</h2>
   </div>
   <div class="pub-grid">
-    <div></div>
     <div class="pub-list">
 
       <div class="pub">
@@ -1243,11 +1220,10 @@
 <!-- ==================== SKILLS ==================== -->
 <section id="skills">
   <div class="section-head">
-    <span class="section-num">§ 06 &nbsp;/&nbsp; Skills &amp; Tools</span>
-    <h2 class="section-title">Things I <em>work with.</em></h2>
+    <span class="section-num">§ 06</span>
+    <h2 class="section-title">Skills &amp; Tools</h2>
   </div>
   <div class="skill-grid">
-    <div></div>
     <div class="skill-columns">
 
       <div class="skill-col">
@@ -1287,11 +1263,10 @@
 <!-- ==================== TEACHING ==================== -->
 <section id="teaching">
   <div class="section-head">
-    <span class="section-num">§ 07 &nbsp;/&nbsp; Teaching</span>
-    <h2 class="section-title">In the <em>classroom.</em></h2>
+    <span class="section-num">§ 07</span>
+    <h2 class="section-title">Teaching</h2>
   </div>
   <div class="teach-grid">
-    <div></div>
     <div class="teach-prose">
       <p>
         Served as <strong>Instructor of Record</strong> for <em>STA 1013 — Statistics Through Examples</em> across three semesters (2022 – 2024), and as <strong>Teaching Assistant</strong> for a range of undergraduate and graduate courses at FSU — spanning introductory statistics, mathematical statistics, and computational methods. Full list available in CV.
@@ -1303,14 +1278,13 @@
 <!-- ==================== CONTACT ==================== -->
 <section id="contact">
   <div class="section-head">
-    <span class="section-num">§ 08 &nbsp;/&nbsp; Contact</span>
-    <h2 class="section-title">Get <em>in touch.</em></h2>
+    <span class="section-num">§ 08</span>
+    <h2 class="section-title">Contact</h2>
   </div>
   <div class="contact-block">
-    <div></div>
     <div>
       <p class="contact-headline">
-        Recruiters, hiring managers, and future collaborators — <em>I'd love to hear from you.</em>
+        Always happy to hear from recruiters, collaborators, or anyone working on interesting problems in high-dimensional statistics, tensor methods, or LLMs.
       </p>
       <a href="mailto:wangjiping44@gmail.com" class="contact-cta">
         <span>Say hello</span>
