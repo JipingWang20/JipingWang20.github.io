@@ -89,6 +89,7 @@
     flex-direction:column;
     gap:20px;
     flex-shrink:0;
+    margin-top:32px;
   }
   .hero-photo{
     width:220px;
@@ -263,10 +264,11 @@
     margin-bottom:6px;
   }
   .exp-body ul li::before{
-    content:"—";
+    content:"›";
     position:absolute;
     left:0;
     color:var(--accent);
+    font-weight:500;
   }
   .exp-body ul li strong{color:var(--ink);font-weight:500}
 
@@ -387,14 +389,14 @@
   <div class="hero-text">
     <h1>Jiping <span class="surname">Wang</span></h1>
     <p>
-      I'm a Ph.D. candidate in Statistics at <strong>Florida State University</strong>, advised by <em>Prof. Xin Zhang</em>. My research develops <strong>scalable, interpretable methods for high-dimensional data</strong> — tensor regression, feature screening, and missing-data methodology — with applications to EEG seizure detection, single-cell genomics, and clinical trials.
+      I'm a Ph.D. candidate in Statistics at <strong>Florida State University</strong>, advised by <em>Prof. Xin Zhang</em>. My research develops <strong>scalable, interpretable methods for high-dimensional data</strong>, including tensor regression, feature screening, and missing-data methodology. These methods apply broadly to structured biomedical and scientific data, with recent applications in neural signal analysis and single-cell genomics.
     </p>
     <p>
-      Before FSU, I studied <strong>mathematical statistics at Xiamen University</strong>, graduating with honors at both M.S. and B.S. levels. Over the last two summers I interned at <a href="#experience">Genentech</a> and <a href="#experience">Ocular Therapeutix</a>, working on clinical-trial design and missing-data methodology for regulatory-grade analyses.
+      Before FSU, I earned my M.S. and B.S. in mathematical statistics at <strong>Xiamen University</strong>, graduating with honors at both levels. There I worked with <em>Prof. Wei Zhong</em> on feature screening methods for survival data. Most recently, I interned at <a href="#experience">Genentech</a> and <a href="#experience">Ocular Therapeutix</a> on clinical-trial design and missing-data methodology for regulatory-grade analyses.
     </p>
 
     <div class="availability-note">
-      <strong>Seeking full-time roles for 2026</strong> — Data Scientist, Applied Scientist, Biostatistician, or Quant Researcher. Ph.D. expected 2026; flexible start between August and December. Open to US relocation.
+      <strong>Seeking full-time roles for 2026</strong> in Data Science, Applied Science, Biostatistics, or Quant Research. Ph.D. expected 2026; flexible start between August and December. Open to US relocation.
     </div>
 
     <div class="links-row">
@@ -409,12 +411,6 @@
   <div class="hero-right">
     <div class="hero-photo">
       <img src="profile.jpg" alt="Jiping Wang">
-    </div>
-    <div class="hero-caption">
-      <div class="caption-label">Based in</div>
-      <div class="caption-val">Tallahassee, FL</div>
-      <div class="caption-label">Open to</div>
-      <div class="caption-val">US relocation</div>
     </div>
   </div>
 </div>
@@ -442,7 +438,7 @@
         <h3>Matrix-Response Regression with <em>Low Tubal Rank</em> and Sparsity</h3>
         <p class="authors"><span class="me">Jiping Wang</span>, Xin Zhang</p>
         <p class="venue"><strong>Under review</strong> · 2026</p>
-        <p class="desc">A unified framework integrating low tubal-rank and sparsity constraints for structured high-dimensional data. Proximal gradient and linearized ADMM algorithms with convergence guarantees; applied to EEG seizure data identifying P4, C4, T4 as the strongest biomarkers.</p>
+        <p class="desc">A framework combining low tubal-rank and sparsity constraints for structured high-dimensional data. Proximal gradient and linearized ADMM algorithms with convergence guarantees; applied to EEG seizure data identifying P4, C4, T4 as the strongest biomarkers.</p>
         <p class="links">t-SVD · tubal rank · ADMM · EEG</p>
       </div>
     </div>
@@ -479,7 +475,7 @@
         <h3>Hierarchical Sure Independence Screening for <em>Multiresolution Classification</em></h3>
         <p class="authors"><span class="me">Jiping Wang</span>, Qing Mai, Xin Zhang</p>
         <p class="venue"><strong>In preparation</strong> · 2026</p>
-        <p class="desc">HierSIS — a scalable screening method for high-dimensional multinomial classification preserving hierarchical response structure. Superior reliability over penalized competitors across p ∈ {1500–5000}; applied to PBMC scRNA-seq data with K=24 cell types.</p>
+        <p class="desc">HierSIS: a scalable screening method for high-dimensional multinomial classification preserving hierarchical response structure. More stable than penalized competitors across p ∈ {1500–5000}; applied to PBMC scRNA-seq data with K=24 cell types.</p>
         <p class="links">HierSIS · multinomial · scRNA-seq</p>
       </div>
     </div>
@@ -545,7 +541,7 @@
         <h3>A/B Testing <em>Copilot</em></h3>
         <p class="authors"><span class="me">Jiping Wang</span> · <em>Personal project</em></p>
         <p class="venue"><strong>Live</strong> · 2026</p>
-        <p class="desc">An LLM agent for statistical A/B testing — built with Anthropic API function calling, scipy, and Streamlit. Supports two-sample tests with CUPED, SRM checks, Benjamini–Hochberg, and segmentation analysis in progress.</p>
+        <p class="desc">An LLM agent for statistical A/B testing. Built with Anthropic API function calling, scipy, and Streamlit. Supports two-sample tests with CUPED, SRM checks, Benjamini–Hochberg, and segmentation analysis in progress.</p>
         <p class="links">
           <a href="https://github.com/JipingWang20/ab-testing-copilot" target="_blank" rel="noopener">Code</a>
           <a href="https://jiping-ab-copilot.streamlit.app/" target="_blank" rel="noopener">Demo</a>
@@ -566,7 +562,7 @@
       <h3><em>Genentech</em></h3>
       <p class="role">Product Development &amp; Data Science Intern</p>
       <ul>
-        <li>Applied <strong>resampling-based simulation</strong> (bootstrap and Monte Carlo) to expand limited PRODIGIES glaucoma datasets, generating statistically valid synthetic cohorts.</li>
+        <li>Applied <strong>resampling-based simulation</strong> (bootstrap and Monte Carlo) to expand limited PRODIGIES glaucoma datasets, generating synthetic cohorts for endpoint evaluation.</li>
         <li>Demonstrated that <strong>cluster-based designs reduce required sample size by 40%</strong>, directly influencing cost and timeline decisions.</li>
         <li>Developed <strong>slope-based disease progression endpoints</strong> that outperformed FDA-approved event-based metrics.</li>
         <li>Implemented longitudinal modeling workflows (PLR, Hierarchical Bayesian Models, AGIS) for MD and VFI trajectories.</li>
@@ -580,9 +576,9 @@
       <h3><em>Ocular Therapeutix</em></h3>
       <p class="role">Biostatistics Intern</p>
       <ul>
-        <li>Led <strong>missing-data methodology</strong> for primary efficacy analysis — Pattern Mixture Models, Multiple Imputation, LOCF sensitivity analyses aligned with ICH E9(R1).</li>
+        <li>Led <strong>missing-data methodology</strong> for primary efficacy analysis, applying Pattern Mixture Models, Multiple Imputation, and LOCF sensitivity analyses aligned with ICH E9(R1).</li>
         <li>Simulated efficacy outcomes (BCVA, CSFT) across missing-data mechanisms (MCAR, MAR, MNAR) to support protocol amendments.</li>
-        <li>Conducted causal inference analyses using <strong>linear mixed models</strong>, informing clinical and regulatory decisions.</li>
+        <li>Conducted causal inference analyses using <strong>linear mixed models</strong> to quantify adjusted treatment effects across treatment groups.</li>
       </ul>
     </div>
   </div>
@@ -593,7 +589,7 @@
   <h2>Education</h2>
 
   <div class="edu-item">
-    <div class="edu-years">2020 — 2026</div>
+    <div class="edu-years">2020–2026</div>
     <div class="edu-body">
       <h3>Ph.D. in <em>Statistics</em></h3>
       <p class="where">Florida State University · Tallahassee, FL</p>
@@ -603,7 +599,7 @@
   </div>
 
   <div class="edu-item">
-    <div class="edu-years">2013 — 2020</div>
+    <div class="edu-years">2013–2020</div>
     <div class="edu-body">
       <h3>M.S. &amp; B.S. in <em>Mathematical Statistics</em></h3>
       <p class="where">Xiamen University · Xiamen, China</p>
