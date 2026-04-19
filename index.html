@@ -61,7 +61,7 @@
     display:grid;
     grid-template-columns:1fr auto;
     gap:48px;
-    align-items:start;
+    align-items:center;
     margin-bottom:56px;
   }
   .hero-text h1{
@@ -89,7 +89,6 @@
     flex-direction:column;
     gap:20px;
     flex-shrink:0;
-    margin-top:32px;
   }
   .hero-photo{
     width:220px;
@@ -123,21 +122,36 @@
     color:var(--ink-soft);
   }
 
-  .links-row{
-    margin-top:8px;
-    padding-top:20px;
-    border-top:1px solid var(--line);
-    font-size:16px;
+  .links-col{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    padding-top:4px;
+    font-size:15px;
   }
-  .links-row a{
+  .links-col a{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
     color:var(--ink);
+    text-decoration:none;
+    width:fit-content;
+    transition:color .15s;
+  }
+  .links-col a span{
     text-decoration:underline;
     text-underline-offset:3px;
     text-decoration-color:var(--line-strong);
-    margin-right:22px;
+    transition:text-decoration-color .15s;
+  }
+  .links-col a svg{
+    flex-shrink:0;
+    color:var(--ink-muted);
     transition:color .15s;
   }
-  .links-row a:hover{color:var(--accent);text-decoration-color:var(--accent)}
+  .links-col a:hover{color:var(--accent)}
+  .links-col a:hover span{text-decoration-color:var(--accent)}
+  .links-col a:hover svg{color:var(--accent)}
 
   /* ==================== SECTION ==================== */
   section{
@@ -389,28 +403,42 @@
   <div class="hero-text">
     <h1>Jiping <span class="surname">Wang</span></h1>
     <p>
-      I'm a Ph.D. candidate in Statistics at <strong>Florida State University</strong>, advised by <em>Prof. Xin Zhang</em>. My research develops <strong>scalable, interpretable methods for high-dimensional data</strong>, including tensor regression, feature screening, and missing-data methodology. These methods apply broadly to structured biomedical and scientific data, with recent applications in neural signal analysis and single-cell genomics.
+      I'm a Ph.D. candidate in Statistics at <strong>Florida State University</strong>, advised by <em>Prof. Xin Zhang</em>. My research develops <strong>scalable, interpretable methods for high-dimensional data</strong>, including tensor regression, feature screening, and applied machine learning. These methods apply broadly to structured biomedical and scientific data, with recent applications in neural signal analysis and single-cell genomics.
     </p>
     <p>
-      Before FSU, I earned my M.S. and B.S. in mathematical statistics at <strong>Xiamen University</strong>, graduating with honors at both levels. There I worked with <em>Prof. Wei Zhong</em> on feature screening methods for survival data. Most recently, I interned at <a href="#experience">Genentech</a> and <a href="#experience">Ocular Therapeutix</a> on clinical-trial design and missing-data methodology for regulatory-grade analyses.
+      Before FSU, I earned my M.S. and B.S. in mathematical statistics at <strong>Xiamen University</strong>, graduating with honors at both levels. During my M.S., I worked with <em>Prof. Wei Zhong</em> on feature screening methods for survival data. Most recently, I interned at <a href="#experience">Genentech</a> and <a href="#experience">Ocular Therapeutix</a> on clinical-trial design and missing-data methodology.
     </p>
 
     <div class="availability-note">
       <strong>Seeking full-time roles for 2026</strong> in Data Science, Applied Science, Biostatistics, or Quant Research. Ph.D. expected 2026; flexible start between August and December. Open to US relocation.
-    </div>
-
-    <div class="links-row">
-      <a href="mailto:wangjiping44@gmail.com">Email</a>
-      <a href="resume.pdf" download>CV</a>
-      <a href="https://scholar.google.com/citations?user=y01JMCQAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
-      <a href="https://github.com/JipingWang20" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/jiping-wang-108311193" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
 
   <div class="hero-right">
     <div class="hero-photo">
       <img src="profile.jpg" alt="Jiping Wang">
+    </div>
+    <div class="links-col">
+      <a href="mailto:wangjiping44@gmail.com">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="1.5"/><polyline points="3,7 12,13 21,7"/></svg>
+        <span>Email</span>
+      </a>
+      <a href="resume.pdf" download>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2.5H6.5a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V8z"/><polyline points="14,2.5 14,8 19.5,8"/><line x1="8.5" y1="13" x2="15.5" y2="13"/><line x1="8.5" y1="17" x2="15.5" y2="17"/></svg>
+        <span>CV</span>
+      </a>
+      <a href="https://scholar.google.com/citations?user=y01JMCQAAAAJ&hl=en" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M22 10v6"/><path d="M6 12v5c3 2.5 9 2.5 12 0v-5"/></svg>
+        <span>Scholar</span>
+      </a>
+      <a href="https://github.com/JipingWang20" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        <span>GitHub</span>
+      </a>
+      <a href="https://www.linkedin.com/in/jiping-wang-108311193" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        <span>LinkedIn</span>
+      </a>
     </div>
   </div>
 </div>
@@ -595,16 +623,26 @@
       <p class="where">Florida State University · Tallahassee, FL</p>
       <p class="details"><strong>Advisor:</strong> Prof. Xin Zhang &nbsp;·&nbsp; <strong>Dissertation:</strong> Topics on High-Dimensional Statistics</p>
     </div>
-    <div class="edu-honors">GPA 3.98 / 4.00<br>Academic Excellence</div>
+    <div class="edu-honors">GPA 3.98 / 4.00</div>
   </div>
 
   <div class="edu-item">
-    <div class="edu-years">2013–2020</div>
+    <div class="edu-years">2017–2020</div>
     <div class="edu-body">
-      <h3>M.S. &amp; B.S. in <em>Mathematical Statistics</em></h3>
+      <h3>M.S. in <em>Mathematical Statistics</em></h3>
+      <p class="where">Xiamen University · Xiamen, China</p>
+      <p class="details"><strong>Advisor:</strong> Prof. Wei Zhong</p>
+    </div>
+    <div class="edu-honors">Rank 1 / 17</div>
+  </div>
+
+  <div class="edu-item">
+    <div class="edu-years">2013–2017</div>
+    <div class="edu-body">
+      <h3>B.S. in <em>Mathematical Statistics</em></h3>
       <p class="where">Xiamen University · Xiamen, China</p>
     </div>
-    <div class="edu-honors">Graduated<br>with honors</div>
+    <div class="edu-honors">Rank 2 / 31</div>
   </div>
 </section>
 
