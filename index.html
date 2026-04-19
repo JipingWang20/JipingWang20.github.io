@@ -84,11 +84,16 @@
   }
   .hero-text p em{color:var(--accent);font-style:italic}
 
-  .hero-photo{
-    width:180px;
-    height:180px;
-    border:1px solid var(--line);
+  .hero-right{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
     flex-shrink:0;
+  }
+  .hero-photo{
+    width:220px;
+    height:220px;
+    border:1px solid var(--line);
     overflow:hidden;
   }
   .hero-photo img{
@@ -96,6 +101,25 @@
     height:100%;
     object-fit:cover;
     display:block;
+  }
+  .hero-caption{
+    width:220px;
+    font-size:13px;
+    line-height:1.5;
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:4px 12px;
+    align-items:baseline;
+  }
+  .hero-caption .caption-label{
+    font-family:'Source Code Pro',monospace;
+    font-size:11px;
+    letter-spacing:0.08em;
+    color:var(--ink-muted);
+    text-transform:uppercase;
+  }
+  .hero-caption .caption-val{
+    color:var(--ink-soft);
   }
 
   .links-row{
@@ -342,7 +366,8 @@
   @media (max-width: 720px){
     .container{padding:40px 20px}
     .hero{grid-template-columns:1fr;gap:24px}
-    .hero-photo{width:140px;height:140px}
+    .hero-photo{width:160px;height:160px}
+    .hero-caption{width:auto;grid-template-columns:auto 1fr auto 1fr;gap:4px 10px;font-size:12px}
     .hero-text h1{font-size:34px}
     .research-item,.exp-item,.edu-item,.skills-grid{
       grid-template-columns:1fr;
@@ -381,8 +406,16 @@
     </div>
   </div>
 
-  <div class="hero-photo">
-    <img src="profile.jpg" alt="Jiping Wang">
+  <div class="hero-right">
+    <div class="hero-photo">
+      <img src="profile.jpg" alt="Jiping Wang">
+    </div>
+    <div class="hero-caption">
+      <div class="caption-label">Based in</div>
+      <div class="caption-val">Tallahassee, FL</div>
+      <div class="caption-label">Open to</div>
+      <div class="caption-val">US relocation</div>
+    </div>
   </div>
 </div>
 
