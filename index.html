@@ -353,16 +353,47 @@
   .skills-list strong{color:var(--ink);font-weight:500}
 
   /* ==================== AVAILABILITY ==================== */
-  .availability-note{
+  .availability-card{
     background:var(--paper);
+    border:1px solid var(--line);
     border-left:3px solid var(--accent);
-    padding:14px 20px;
+    padding:18px 22px;
     margin-top:20px;
+  }
+  .avail-heading{
+    font-family:'Source Code Pro',monospace;
+    font-size:11px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:10px;
+  }
+  .avail-roles-list{
+    color:var(--ink);
     font-size:15px;
     line-height:1.55;
-    color:var(--ink-soft);
+    margin-bottom:8px;
+    font-weight:500;
   }
-  .availability-note strong{color:var(--ink)}
+  .avail-meta{
+    color:var(--ink-muted);
+    font-size:13px;
+    line-height:1.5;
+  }
+  .avail-meta .avail-dot{
+    display:inline-block;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:#10b981;
+    margin-right:7px;
+    vertical-align:middle;
+    transform:translateY(-1px);
+  }
+  .avail-meta .sep{
+    margin:0 8px;
+    color:var(--line-strong);
+  }
 
   /* ==================== FOOTER ==================== */
   footer{
@@ -409,8 +440,12 @@
       Before FSU, I earned my M.S. and B.S. in mathematical statistics at <strong>Xiamen University</strong>, graduating with honors at both levels. During my M.S., I worked with <em>Prof. Wei Zhong</em> on feature screening methods for survival data. Most recently, I interned at <a href="#experience">Genentech</a> and <a href="#experience">Ocular Therapeutix</a> on clinical-trial design and missing-data methodology.
     </p>
 
-    <div class="availability-note">
-      <strong>Seeking full-time roles for 2026</strong> in Data Science, Applied Science, Biostatistics, or Quant Research. Ph.D. expected 2026; flexible start between August and December. Open to US relocation.
+    <div class="availability-card">
+      <div class="avail-heading">Seeking full-time roles · 2026</div>
+      <div class="avail-roles-list">Data Scientist · Applied Scientist · Biostatistician · Machine Learning Scientist · Quant Researcher</div>
+      <div class="avail-meta">
+        <span class="avail-dot"></span>Available 2026<span class="sep">·</span>Flexible start<span class="sep">·</span>Open to US relocation
+      </div>
     </div>
   </div>
 
