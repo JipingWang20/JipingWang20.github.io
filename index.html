@@ -504,7 +504,7 @@
         <h3>Matrix-Response Regression with <em>Low Tubal Rank</em> and Sparsity</h3>
         <p class="authors"><span class="me">Jiping Wang</span>, Xin Zhang</p>
         <p class="venue"><strong>Under review</strong> · 2026</p>
-        <p class="desc">A framework combining low tubal-rank and sparsity constraints for structured high-dimensional data. Proximal gradient and linearized ADMM algorithms with convergence guarantees; applied to EEG seizure data identifying P4, C4, T4 as the strongest biomarkers.</p>
+        <p class="desc">A matrix-response regression framework combining low tubal-rank and sparsity constraints for structured high-dimensional data. Proximal gradient and linearized ADMM algorithms with convergence guarantees, non-asymptotic error bounds, and variable selection consistency. Outperformed 6 competing methods across 9 simulation settings; applied to EEG seizure data (19 electrodes, 60 timepoints) identifying P4, C4, T4 as the strongest biomarkers.</p>
         <p class="links">t-SVD · tubal rank · ADMM · EEG</p>
       </div>
     </div>
@@ -541,7 +541,7 @@
         <h3>Hierarchical Sure Independence Screening for <em>Multiresolution Classification</em></h3>
         <p class="authors"><span class="me">Jiping Wang</span>, Qing Mai, Xin Zhang</p>
         <p class="venue"><strong>In preparation</strong> · 2026</p>
-        <p class="desc">HierSIS: a scalable screening method for high-dimensional multinomial classification preserving hierarchical response structure. More stable than penalized competitors across p ∈ {1500–5000}; applied to PBMC scRNA-seq data with K=24 cell types.</p>
+        <p class="desc">HierSIS lifts sure independence screening from flat to hierarchically structured multinomial responses by screening at each node of the class hierarchy, with sure screening guarantees generalizing Fan &amp; Song (2010). Higher true-signal recovery than flat SIS and penalized competitors across p ∈ {1500–5000}; on PBMC scRNA-seq data (152,244 cells, 24 fine cell types in 11 coarse classes) it improves macro-F1 by 0.02 and balanced error rate by 0.03 over mrMLR.</p>
         <p class="links">HierSIS · multinomial · scRNA-seq</p>
       </div>
     </div>
@@ -628,10 +628,10 @@
       <h3><em>Genentech</em></h3>
       <p class="role">Product Development &amp; Data Science Intern</p>
       <ul>
-        <li>Applied <strong>resampling-based simulation</strong> (bootstrap and Monte Carlo) to expand limited PRODIGIES glaucoma datasets, generating synthetic cohorts for endpoint evaluation.</li>
-        <li>Demonstrated that <strong>cluster-based designs reduce required sample size by 40%</strong>, directly influencing cost and timeline decisions.</li>
-        <li>Developed <strong>slope-based disease progression endpoints</strong> that outperformed FDA-approved event-based metrics.</li>
-        <li>Implemented longitudinal modeling workflows (PLR, Hierarchical Bayesian Models, AGIS) for MD and VFI trajectories.</li>
+        <li>Simulated <strong>longitudinal visual field data</strong> to augment limited real-world datasets, enabling large-scale evaluation of experimental designs and statistical endpoints.</li>
+        <li>Quantified trade-offs across experimental designs and demonstrated that <strong>cluster-based designs reduced required sample sizes by 40%</strong>.</li>
+        <li>Developed and evaluated <strong>slope-based progression endpoints</strong> against established event-based metrics, improving sensitivity to progression and enabling earlier detection.</li>
+        <li>Implemented statistical models, including piecewise linear regression, hierarchical Bayesian models, and AGIS, to analyze pointwise visual field measurements and quantify progression patterns.</li>
       </ul>
     </div>
   </div>
@@ -642,9 +642,9 @@
       <h3><em>Ocular Therapeutix</em></h3>
       <p class="role">Biostatistics Intern</p>
       <ul>
-        <li>Led <strong>missing-data methodology</strong> for primary efficacy analysis, applying Pattern Mixture Models, Multiple Imputation, and LOCF sensitivity analyses aligned with ICH E9(R1).</li>
-        <li>Simulated efficacy outcomes (BCVA, CSFT) across missing-data mechanisms (MCAR, MAR, MNAR) to support protocol amendments.</li>
-        <li>Conducted causal inference analyses using <strong>linear mixed models</strong> to quantify adjusted treatment effects across treatment groups.</li>
+        <li>Conducted <strong>simulation studies in R</strong> to evaluate statistical models for longitudinal data under varying treatment-effect scenarios.</li>
+        <li>Generated and analyzed simulated longitudinal datasets with repeated measurements, evaluating model performance through hypothesis testing and treatment-effect estimation.</li>
+        <li>Applied <strong>linear mixed-effects models</strong> with treatment, time, treatment-by-time interactions, and baseline covariates to assess differences between experimental groups.</li>
       </ul>
     </div>
   </div>
