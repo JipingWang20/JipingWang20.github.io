@@ -101,25 +101,6 @@
   }
   .nav-links a.cv:hover{background:var(--accent);color:var(--bg)}
 
-  /* ==================== HIGHLIGHTS ==================== */
-  .highlights{
-    display:grid;grid-template-columns:repeat(4,1fr);
-    border:1px solid var(--line);background:var(--paper);
-    margin-top:40px;
-  }
-  .hl{padding:18px 20px;border-left:1px solid var(--line)}
-  .hl:first-child{border-left:none}
-  .hl-num{
-    font-size:26px;font-weight:500;color:var(--ink);
-    letter-spacing:-0.02em;line-height:1.1;
-  }
-  .hl-num em{font-style:italic;color:var(--accent)}
-  .hl-label{
-    font-family:'Source Code Pro',monospace;font-size:11px;
-    letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-muted);
-    margin-top:6px;line-height:1.4;
-  }
-
   /* ==================== BUTTONS / TAGS ==================== */
   .btn-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
   .btn{
@@ -517,9 +498,6 @@
     .nav-inner{padding:10px 20px}
     .nav-links{gap:14px;font-size:13px}
     .nav-links a:not(.cv){display:none}
-    .highlights{grid-template-columns:1fr 1fr}
-    .hl:nth-child(3){border-left:none}
-    .hl:nth-child(n+3){border-top:1px solid var(--line)}
     .research-item{padding:0;margin:0}
     .research-item:hover{background:transparent}
     .hero{grid-template-columns:1fr;gap:24px}
@@ -605,14 +583,6 @@
       </a>
     </div>
   </div>
-</div>
-
-<!-- ==================== HIGHLIGHTS ==================== -->
-<div class="highlights">
-  <div class="hl"><div class="hl-num"><em>40%</em></div><div class="hl-label">Smaller trial sample sizes, Genentech</div></div>
-  <div class="hl"><div class="hl-num">CSDA</div><div class="hl-label">Published paper, 2021 · 1 under review</div></div>
-  <div class="hl"><div class="hl-num">3.98</div><div class="hl-label">Ph.D. GPA / 4.00</div></div>
-  <div class="hl"><div class="hl-num">6<em>+</em> yrs</div><div class="hl-label">R &amp; Python for research</div></div>
 </div>
 
 <!-- ==================== RESEARCH ==================== -->
