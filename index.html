@@ -32,6 +32,7 @@
     --ink-muted:#767676;
     --accent:#800020;
     --accent-soft:#efc4cd;
+    --accent-rgb:128,0,32;
     --line:#e5e3de;
     --line-strong:#c8c5bd;
     --paper:#fafaf7;
@@ -46,6 +47,7 @@
       --ink-muted:#8d8b84;
       --accent:#e0707f;
       --accent-soft:#4d0a1a;
+      --accent-rgb:224,112,127;
       --line:#2a2a2e;
       --line-strong:#3c3c42;
       --paper:#19191c;
@@ -106,18 +108,19 @@
   .btn{
     display:inline-flex;align-items:center;gap:6px;
     font-size:14.5px;font-weight:500;padding:5px 12px;border-radius:999px;
-    border:1px solid var(--line-strong);color:var(--ink);
+    border:1px solid rgba(var(--accent-rgb),.35);color:var(--accent);background:transparent;
     transition:border-color .15s,color .15s,background .15s;
   }
-  .btn:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+  .btn:hover{border-color:var(--accent);background:rgba(var(--accent-rgb),.08);text-decoration:none}
   .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
   .btn.primary:hover{opacity:.9;color:#fff}
   .btn svg{width:13px;height:13px}
   .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
   .tag{
     font-family:'Source Code Pro',monospace;font-size:13px;
-    color:var(--ink-muted);background:var(--chip);
-    padding:3px 9px;border-radius:4px;letter-spacing:0.02em;
+    color:var(--accent);background:rgba(var(--accent-rgb),.06);
+    border:1px solid rgba(var(--accent-rgb),.15);
+    padding:2px 9px;border-radius:4px;letter-spacing:0.02em;
   }
   .result{
     font-size:16px;line-height:1.5;color:var(--ink-soft);
@@ -429,10 +432,10 @@
   .skills-list strong{color:var(--ink);font-weight:500}
   .skills-list.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4px}
   .skills-list.chips span{
-    font-size:15px;color:var(--ink-soft);background:var(--chip);
+    font-size:15px;color:var(--ink-soft);background:transparent;
     border:1px solid var(--line);padding:3px 10px;border-radius:999px;
   }
-  .skills-list.chips span.hi{color:var(--ink);border-color:var(--line-strong);font-weight:500}
+  .skills-list.chips span.hi{color:var(--accent);border-color:rgba(var(--accent-rgb),.4);background:rgba(var(--accent-rgb),.06);font-weight:500}
 
   /* ==================== AVAILABILITY ==================== */
   .availability-card{
