@@ -33,6 +33,7 @@
     --accent:#800020;
     --accent-soft:#efc4cd;
     --accent-rgb:128,0,32;
+    --cream:#fdf7e8;
     --line:#ecdde2;
     --line-strong:#c8c5bd;
     --paper:#fbf3f5;
@@ -48,6 +49,7 @@
       --accent:#e0707f;
       --accent-soft:#4d0a1a;
       --accent-rgb:224,112,127;
+      --cream:#2a2418;
       --line:#2a2a2e;
       --line-strong:#3c3c42;
       --paper:#1f1719;
@@ -102,7 +104,7 @@
     transition:background .15s,color .15s;
   }
   .nav-links a.cv:hover{background:rgba(var(--accent-rgb),.08)}
-  .nav-links a.cv:active{background:rgba(var(--accent-rgb),.04)}
+  .nav-links a.cv:active{background:var(--cream)}
 
   /* ==================== BUTTONS / TAGS ==================== */
   .btn-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
@@ -113,7 +115,7 @@
     transition:border-color .15s,color .15s,background .15s;
   }
   .btn:hover{border-color:var(--accent);background:rgba(var(--accent-rgb),.04);text-decoration:none}
-  .btn:active{background:rgba(var(--accent-rgb),.02)}
+  .btn:active{background:var(--cream)}
   .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
   .btn.primary:hover{opacity:.9;color:#fff}
   .btn svg{width:13px;height:13px}
@@ -260,7 +262,7 @@
     transition:background .2s;
   }
   .research-item:hover{background:rgba(var(--accent-rgb),.03)}
-  .research-item:active{background:rgba(var(--accent-rgb),.015)}
+  .research-item:active{background:var(--cream)}
   .research-list{gap:44px}
   .research-fig{
     width:140px;
