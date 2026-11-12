@@ -101,7 +101,8 @@
     padding:4px 12px;border-radius:999px;font-weight:500;
     transition:background .15s,color .15s;
   }
-  .nav-links a.cv:hover{background:var(--accent);color:var(--bg)}
+  .nav-links a.cv:hover{background:rgba(var(--accent-rgb),.08)}
+  .nav-links a.cv:active{background:rgba(var(--accent-rgb),.04)}
 
   /* ==================== BUTTONS / TAGS ==================== */
   .btn-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
@@ -111,7 +112,8 @@
     border:1px solid rgba(var(--accent-rgb),.35);color:var(--accent);background:transparent;
     transition:border-color .15s,color .15s,background .15s;
   }
-  .btn:hover{border-color:var(--accent);background:rgba(var(--accent-rgb),.08);text-decoration:none}
+  .btn:hover{border-color:var(--accent);background:rgba(var(--accent-rgb),.04);text-decoration:none}
+  .btn:active{background:rgba(var(--accent-rgb),.02)}
   .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
   .btn.primary:hover{opacity:.9;color:#fff}
   .btn svg{width:13px;height:13px}
@@ -257,7 +259,8 @@
     border-radius:6px;
     transition:background .2s;
   }
-  .research-item:hover{background:var(--paper)}
+  .research-item:hover{background:rgba(var(--accent-rgb),.03)}
+  .research-item:active{background:rgba(var(--accent-rgb),.015)}
   .research-list{gap:44px}
   .research-fig{
     width:140px;
